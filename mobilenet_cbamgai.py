@@ -1,6 +1,6 @@
 from torch import nn
-from .utils import load_state_dict_from_url
-from .blocks import CBAMLayer_gai
+#from .utils import load_state_dict_from_url
+from blocks import CBAMLayer_gai
 
 
 __all__ = ['MobileNetV2', 'mobilenet_v2cbamgai']
@@ -190,8 +190,8 @@ def mobilenet_v2cbamgai(pretrained=False, progress=True, **kwargs):
         progress (bool): If True, displays a progress bar of the download to stderr
     """
     model = MobileNetV2(**kwargs)
-    if pretrained:
-        state_dict = load_state_dict_from_url(model_urls['mobilenet_v2'],
-                                              progress=progress)
-        model.load_state_dict(state_dict)
+    #if pretrained:
+     #   state_dict = load_state_dict_from_url(model_urls['mobilenet_v2'],
+      #                                        progress=progress)
+       # model.load_state_dict(state_dict)
     return model
