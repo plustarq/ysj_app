@@ -1,8 +1,11 @@
 name: app-environment
+channels: conda-forge
 dependencies:
   - python=3.7
-  - torch
-  - torchvision
-  - fastai
-  - ipywidgets
-  - Voila
+  - pip
+  - pip:
+    - torch
+    - torchvision
+    - fastai
+    - ipywidgets
+    - Voila
